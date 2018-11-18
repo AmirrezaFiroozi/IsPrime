@@ -18,19 +18,19 @@
 
 int main()
 {
- int IsPrime,input,i;
-IsPrime = 1;
-printf("Please Enter a number to find out whether its prime or not : ");
-scanf("%d",&input);
-for(i=2;i<=input/2;i++)
-    if(input%i == 0){
-        IsPrime = 0;
-        break;
-    }
-
-if(IsPrime==1)
-    printf("%d is prime!", input);
-else
-    printf("%d is not prime It can be devided by %d\n", input,i);
-return 0;
+    int IsPrime, input, i;
+    IsPrime = 1;
+    printf("Please Enter a number to find out whether its prime or not : ");
+    scanf("%d",&input);
+    for(i=2;i<=input/2;i++)
+        if(input%i == 0){
+            IsPrime = 0;
+            break;
+        }
+    
+    if( (IsPrime == 1) && (input != 1) ) 
+        printf("%d is prime!", input);
+    else
+        printf("%d is not prime It can be devided by %d\n", input, input==1?1:i);
+    return 0;
 }
